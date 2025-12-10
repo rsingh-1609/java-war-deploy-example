@@ -11,7 +11,21 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+   <!-- ***** ADD THIS SECTION ***** -->
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Release Pipeline Repo</name>
+            <url>http://192.168.1.10:8081/repository/release-pipeline/</url>
+        </repository>
 
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshot Pipeline Repo</name>
+            <url>http://192.168.1.10:8081/repository/snapshot-pipeline/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <!-- ***** END SECTION ***** -->
 	<build>
 		<plugins>
 			<plugin>
